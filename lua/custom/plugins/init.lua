@@ -2,6 +2,11 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
+
+-- which-key: Time in milliseconds to wait for a mapped sequence to complete.
+vim.opt.timeoutlen = 300
+vim.opt.colorcolumn = '80'
+
 return {
   -- color scheme
   {
@@ -10,6 +15,14 @@ return {
     cmd = 'ColorizerToggle',
     config = function()
       require('colorizer').setup()
+    end,
+  },
+  {
+    'SmiteshP/nvim-gps',
+    requires = 'nvim-treesitter/nvim-treesitter',
+    module = 'nvim-gps',
+    config = function()
+      require('nvim-gps').setup()
     end,
   },
 }
