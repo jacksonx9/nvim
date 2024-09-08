@@ -7,6 +7,15 @@
 vim.opt.timeoutlen = 300
 vim.opt.colorcolumn = '80'
 
+-- Better Netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+-- vim.opt.termguicolors = true
+
+vim.opt.wildignorecase = true
+
 return {
   -- color scheme
   {
@@ -15,14 +24,6 @@ return {
     cmd = 'ColorizerToggle',
     config = function()
       require('colorizer').setup()
-    end,
-  },
-  {
-    'SmiteshP/nvim-gps',
-    requires = 'nvim-treesitter/nvim-treesitter',
-    module = 'nvim-gps',
-    config = function()
-      require('nvim-gps').setup()
     end,
   },
 }
