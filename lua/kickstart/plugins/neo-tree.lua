@@ -45,24 +45,24 @@ return {
         },
       },
     },
-  },
-  event_handlers = {
-    {
-      event = 'file_open_requested',
-      handler = function()
-        -- auto close
-        -- vim.cmd("Neotree close")
-        -- OR
-        require('neo-tree.command').execute { action = 'close' }
-      end,
-    },
-    {
-      event = 'neo_tree_buffer_enter',
-      handler = function(arg)
-        vim.cmd [[
-          setlocal relativenumber
+    event_handlers = {
+      {
+        event = 'file_open_requested',
+        handler = function()
+          -- auto close
+          -- vim.cmd("Neotree close")
+          -- OR
+          require('neo-tree.command').execute { action = 'close' }
+        end,
+      },
+      {
+        event = 'neo_tree_buffer_enter',
+        handler = function(arg)
+          vim.cmd [[
+          setlocal relativenumber 
         ]]
-      end,
+        end,
+      },
     },
   },
 }
