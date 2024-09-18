@@ -35,16 +35,11 @@ return {
   --    highlight = 'NeoTreeFileName',
   --  },
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal' },
+    { '<leader>ee', ':Neotree reveal<CR>', desc = 'NeoTree reveal' },
+    { '<leader>ef', ':Neotree reveal_force_cwd<CR>', desc = 'NeoTree reveal on current file' },
+    { '<leader>ec', ':Neotree close<CR>', desc = 'NeoTree close' },
   },
   opts = {
-    filesystem = {
-      window = {
-        mappings = {
-          ['\\'] = 'close_window',
-        },
-      },
-    },
     event_handlers = {
       {
         event = 'file_open_requested',
